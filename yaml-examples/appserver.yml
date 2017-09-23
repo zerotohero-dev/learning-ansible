@@ -1,0 +1,7 @@
+--- # App Server
+- hosts: appserver
+  taks:
+  - name: Install lynx on App servers.
+    yum: pkg=lynx state=installed update_cache=true
+  - name: Querying telnet install
+    yum: pkg=telnet state=present upcate_cache=true

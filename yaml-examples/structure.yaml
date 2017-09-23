@@ -1,0 +1,24 @@
+--- # Structural YAML Example to install HTTP on CentOS
+- hosts: centos
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: true # gets info about, OS, its, what packages it has installed.
+                     # things that ansible might want to know to accomplish
+                     # its tasks.
+  vars:
+    username: myuser
+  tasks:
+  - name: Install HTTPD server on CentOS 7 Nodes
+    yum: 
+      name: httpd
+      state: latest
+    notify:
+    -  startservice
+  handlers:
+  - name: startservice
+    service:
+      name: httpd
+      state: restarted
+

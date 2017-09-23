@@ -1,0 +1,13 @@
+[local]
+localhost
+# localhost.localdomain
+# 127.0.0.1
+
+[apacheweb]
+apache000.example.com
+
+[app]
+app000.example.com
+
+[git]
+git000.example.com

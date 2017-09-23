@@ -1,0 +1,5 @@
+--- # Newline Preservation — Will be actually formatted exactly how you see it.
+typing: |
+Lorem ipsum dolor sit ahmet
+Newlines are being preserved.
+    So are indents and other stuff.

@@ -1,0 +1,7 @@
+--- # Casting
+a: 123
+b: "123"
+c: 123.0
+d: !!float 123
+e: !!str 123
+f: !!str Yes

@@ -1,0 +1,20 @@
+--- # Installs Nginx and starts the service
+- hosts: centos
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  gather_facts: yes
+  connection: ssh
+  tasks:
+  - name: Install NGINX Web Server
+    yum:
+      name: nginx
+      state: latest
+    notify:
+    - Enable and start the nginx service
+  handlers:
+  - name: Enable and start the nginx service
+    service:
+      name: nginx
+      enabled: yes
+      state: restarted
